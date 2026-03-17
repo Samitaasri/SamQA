@@ -1,0 +1,21 @@
+{
+  "name": "playwright-bdd-framework",
+  "version": "1.0.0",
+  "description": "Playwright BDD framework with Cucumber and TypeScript",
+  "scripts": {
+  "test": "cucumber-js",
+  "report": "node reports/generate-report.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

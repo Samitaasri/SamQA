@@ -1,0 +1,64 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user is on login page",
+            "match": {
+              "location": "step-definitions\\loginSteps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1577385900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user enters username and password",
+            "match": {
+              "location": "step-definitions\\loginSteps.ts:18"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 23161651799,
+              "error_message": "page.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at World.<anonymous> (C:\\Users\\Samitaasri\\playwright-bdd-framework\\step-definitions\\loginSteps.ts:20:16)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "user should see dashboard",
+            "match": {
+              "location": "step-definitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
