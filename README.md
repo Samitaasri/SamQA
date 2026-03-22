@@ -5,3 +5,4 @@
 - BDD Framework using Cucumber
 - Feature files & Step Definitions
 - Sample UI automation scenarios
+- API Testing
