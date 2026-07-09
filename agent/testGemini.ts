@@ -11,7 +11,7 @@ async function main() {
     const page = await browser.newPage();
 
     const planText = await createPlan(
-    "Go to https://the-internet.herokuapp.com/javascript_alerts"
+    "Go to https://the-internet.herokuapp.com/javascript_alerts and click the 'Click for JS Alert' button "
 );
 
     console.log("Generated Plan:");

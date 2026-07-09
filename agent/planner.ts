@@ -4,27 +4,31 @@ export async function createPlan(task: string): Promise<string> {
     const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
         contents: `
-You are a QA Automation Planner.
+You are a Playwright automation planner.
 
 Return ONLY valid JSON.
+
+Supported actions:
+- goto
+- click
+- fill
+- press
+- acceptAlert
 
 Example:
 
 {
-  "steps":[
+  "steps": [
     {
-      "action":"goto",
-      "url":"https://google.com"
+      "action": "goto",
+      "url": "https://the-internet.herokuapp.com/javascript_alerts"
     },
     {
-      "action":"fill",
-      "locator":"textarea[name='q']",
-      "value":"Playwright"
+      "action": "click",
+      "locator": "text=Click for JS Alert"
     },
     {
-      "action":"press",
-      "locator":"textarea[name='q']",
-      "value":"Enter"
+      "action": "acceptAlert"
     }
   ]
 }
@@ -36,7 +40,6 @@ ${task}
 
     const text = response.text ?? "";
 
-    // Remove markdown code fences if Gemini adds them
     return text
         .replace(/^```json\s*/i, "")
         .replace(/^```\s*/i, "")
